@@ -15,7 +15,7 @@ const Menu = () => {
             <div className="w-full md:w-1/2">
               <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-amber-200 transform hover:scale-105 transition duration-500">
                 <Image
-                  src={"/.jpg"}
+                  src={"/KERIPIK PISANG.jpg"}
                   alt="Pisang Goreng Naira Snack"
                   fill
                   className="object-cover hover:opacity-90 transition duration-300"

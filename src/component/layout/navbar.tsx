@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
 import { Link as ScrollLink } from 'react-scroll'; 
+import Logo from "@/public/logo.jpeg";
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -40,7 +41,7 @@ const Navbar = () => {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative w-16 h-16">
               <Image 
-                src="/logo.JPEG" 
+                src={Logo}
                 alt="Naira Snack Logo" 
                 fill 
                 className="object-contain group-hover:scale-105 transition-transform"
