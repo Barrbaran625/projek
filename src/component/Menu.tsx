@@ -15,7 +15,7 @@ const Menu = () => {
             <div className="w-full md:w-1/2">
               <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-amber-200 transform hover:scale-105 transition duration-500">
                 <Image
-                  src={"/PISGOR.jpeg"}
+                  src={"/.jpg"}
                   alt="Pisang Goreng Naira Snack"
                   fill
                   className="object-cover hover:opacity-90 transition duration-300"
@@ -29,7 +29,7 @@ const Menu = () => {
               <div className="border-b-2 border-amber-200 pb-4">
                 <h1 className="text-4xl md:text-5xl font-bold text-amber-900 mb-2"
                     style={{fontFamily: "'DM Serif Display', serif"}}>
-                  Pisang Gorengggggg
+                  KERIPIK PISANG 
                 </h1>
                 <h2 className="text-3xl text-amber-700 tracking-wide"
                     style={{fontFamily: "'Playfair Display', serif"}}>
@@ -39,21 +39,21 @@ const Menu = () => {
               
               <h3 className="text-xl text-amber-600 italic mt-4"
                   style={{fontFamily: "'Playfair Display', serif"}}>
-                Camilan sederhana yang diolah dengan sepenuh hati
+                Camilan nikmat penuh manfaat dari buah pilihan nusantara
               </h3>
               
               <div className="space-y-4 text-amber-900" style={{fontFamily: "'Montserrat', sans-serif"}}>
                 <p className="text-lg leading-relaxed">
-                  Nikmati sensasi cita rasa otentik dari Pisang Goreng Naira Snack—dibuat dari pisang pilihan yang matang alami, berpadu dengan adonan spesial yang menghasilkan tekstur renyah sempurna di luar dan lembut manis di dalam.
+                 Rasakan kelezatan camilan khas Indonesia yang sudah melegenda—Keripik Pisang Naira Snacks! Dibuat dari pisang berkualitas yang dipilih secara selektif, diiris tipis, dan digoreng hingga renyah keemasan, menghasilkan perpaduan rasa gurih dan manis yang pas di lidah.
                 </p>
                 
                 <p className="text-lg leading-relaxed">
-                  Setiap gigitan menghadirkan keseimbangan rasa: gurih dari balutan tepung yang digoreng keemasan, dan manis alami dari pisangnya yang legit. Cocok disajikan hangat sebagai teman minum teh, kopi, atau sekadar pengisi waktu santai bersama keluarga.
+                  Cocok dinikmati kapan saja: saat santai bersama keluarga, menemani waktu bekerja, hingga jadi oleh-oleh penuh makna. Tak hanya lezat, keripik pisang ini juga menyimpan segudang manfaat dari kandungan serat, vitamin C, dan kalium yang baik untuk pencernaan, jantung, dan tekanan darah.
                 </p>
                 
                 <div className="font-semibold text-lg bg-amber-100 p-4 rounded-lg border-l-4 border-amber-400 italic">
                   <span className="text-amber-600 block mb-1">✦ Keunggulan Produk ✦</span>
-                  Tanpa bahan pengawet, diolah secara higienis, dan dikemas dengan penuh perhatian—menghadirkan kualitas rasa yang tulus dan khas rumahan.
+                  Tanpa bahan pengawet, dibuat dengan teknik tradisional dan kehigienisan modern—menjadikan setiap gigitan bukan sekadar camilan, tapi juga bagian dari warisan rasa yang sehat dan alami.
                 </div>
               </div>
             </div>

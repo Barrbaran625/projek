@@ -4,18 +4,23 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { FaPhoneAlt, FaShoppingCart } from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
+import { Link as ScrollLink } from 'react-scroll'; 
 
 const Navbar = () => {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [cartItems] = useState(3); // Example cart count
 
   const navItems = [
     { name: "HOME", path: "/", icon: "🍳" },
     { name: "MENU", path: "/menu", icon: "📋" },
     { name: "ABOUT", path: "/about", icon: "🌟" },
-    { name: "CONTACT", path: "/contact", icon: "📞" },
+    { 
+      name: "CONTACT", 
+      path: "contact", // This will be the ID of your footer section
+      icon: <FaPhoneAlt className="text-white" />,
+      isScroll: true // Flag to identify scrollable links
+    },
   ];
 
   const toggleMenu = () => {
@@ -27,7 +32,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         {/* Top Promo Banner */}
         <div className="bg-amber-400 text-black text-center py-1 text-sm font-bold">
-          🚀 FREE Ongkir untuk pesanan di atas Rp 50.000!
+          🚀 FREE Ongkir sekitar Sentul dan Tanah Baru!
         </div>
 
         <div className="flex justify-between items-center py-3">
@@ -53,31 +58,35 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
-              <Link href={item.path} key={item.path}>
-                <button className={`flex items-center gap-2 px-5 py-3 rounded-full text-white font-medium transition-all ${
-                  pathname === item.path 
-                    ? "bg-white/20 backdrop-blur-sm" 
-                    : "hover:bg-white/10 hover:scale-105"
-                }`}>
+              item.isScroll ? (
+                <ScrollLink
+                  key={item.path}
+                  to={item.path}
+                  smooth={true}
+                  duration={500}
+                  offset={-70} // Adjust this if you have a fixed header
+                  className={`flex items-center gap-2 px-5 py-3 rounded-full text-white font-medium transition-all cursor-pointer ${
+                    pathname === `/${item.path}` 
+                      ? "bg-white/20 backdrop-blur-sm" 
+                      : "hover:bg-white/10 hover:scale-105"
+                  }`}
+                >
                   <span className="text-xl">{item.icon}</span>
                   {item.name}
-                </button>
-              </Link>
+                </ScrollLink>
+              ) : (
+                <Link href={item.path} key={item.path}>
+                  <button className={`flex items-center gap-2 px-5 py-3 rounded-full text-white font-medium transition-all ${
+                    pathname === item.path 
+                      ? "bg-white/20 backdrop-blur-sm" 
+                      : "hover:bg-white/10 hover:scale-105"
+                  }`}>
+                    <span className="text-xl">{item.icon}</span>
+                    {item.name}
+                  </button>
+                </Link>
+              )
             ))}
-            
-            {/* Call Button */}
-            <a href="tel:089877654" className="ml-4 flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-full font-bold transition-all">
-              <FaPhoneAlt />
-              Order Now
-            </a>
-            
-            {/* Cart Indicator */}
-            <button className="ml-4 relative p-3 text-white hover:text-amber-300">
-              <FaShoppingCart className="text-2xl" />
-              <span className="absolute -top-1 -right-1 bg-amber-400 text-black text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                {cartItems}
-              </span>
-            </button>
           </div>
 
           {/* Mobile Hamburger */}
@@ -97,26 +106,34 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden bg-[#a02d2d] pb-6 px-4 animate-slideDown">
           {navItems.map((item) => (
-            <Link href={item.path} key={item.path} onClick={toggleMenu}>
-              <div className={`flex items-center gap-3 py-4 px-5 text-white text-lg border-b border-white/10 ${
-                pathname === item.path ? "bg-white/20" : "hover:bg-white/10"
-              }`}>
+            item.isScroll ? (
+              <ScrollLink
+                key={item.path}
+                to={item.path}
+                smooth={true}
+                duration={500}
+                offset={-70}
+                onClick={toggleMenu}
+                className={`flex items-center gap-3 py-4 px-5 text-white text-lg border-b border-white/10 cursor-pointer ${
+                  pathname === `/${item.path}` ? "bg-white/20" : "hover:bg-white/10"
+                }`}
+              >
                 <span className="text-xl">{item.icon}</span>
                 {item.name}
-              </div>
-            </Link>
+              </ScrollLink>
+            ) : (
+              <Link href={item.path} key={item.path} onClick={toggleMenu}>
+                <div className={`flex items-center gap-3 py-4 px-5 text-white text-lg border-b border-white/10 ${
+                  pathname === item.path ? "bg-white/20" : "hover:bg-white/10"
+                }`}>
+                  <span className="text-xl">{item.icon}</span>
+                  {item.name}
+                </div>
+              </Link>
+            )
           ))}
           
-          <div className="flex gap-4 mt-4 px-2">
-            <a href="tel:089877654" className="flex-1 flex items-center justify-center gap-2 bg-green-600 text-white py-3 px-4 rounded-lg font-bold">
-              <FaPhoneAlt />
-              Call Us
-            </a>
-            <button className="flex-1 flex items-center justify-center gap-2 bg-amber-500 text-black py-3 px-4 rounded-lg font-bold">
-              <FaShoppingCart />
-              Cart ({cartItems})
-            </button>
-          </div>
+         
         </div>
       )}
     </nav>

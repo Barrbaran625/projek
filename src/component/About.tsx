@@ -8,13 +8,13 @@ const AboutNairaSnack = () => {
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
           {/* Gambar Produk */}
           <div className="w-full md:w-1/2">
-            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-xl border-4 border-amber-200">
+            <div className="relative aspect-square rounded-2xl  shadow-xl border-4 border-amber-200">
               <Image
-                src="/pisang-goreng-naira.jpg"
-                alt="Pisang Goreng Naira Snack"
-                fill
-                className="object-cover"
-                priority
+                src="/rumah.jpeg"
+             alt="Pisang Goreng Naira Snack"
+                  fill
+                  className="object-cover hover:opacity-90 transition duration-300"
+                  priority
               />
             </div>
           </div>
@@ -27,16 +27,19 @@ const AboutNairaSnack = () => {
             
             <div className="space-y-4 text-amber-900 text-justify">
               <p className="text-lg">
-                <span className="font-semibold">Naira Snack</span> adalah usaha kuliner yang berawal dari kecintaan terhadap camilan tradisional Indonesia, khususnya pisang goreng. Kami memulai bisnis ini pada tahun 2020 dengan misi menghadirkan pisang goreng berkualitas dengan cita rasa istimewa.
+                <span className="font-semibold">Naira Snack</span> merupakan usaha kuliner rumahan yang berdiri sejak tahun 2004 di Sentul. Kami menghadirkan camilan tradisional khas Indonesia dengan menjadikan keripik pisang sebagai produk unggulan.
+
+
               </p>
               
               <p className="text-lg">
-                Berdiri di Sentul, Bogor, Naira Snack lahir dari ide sederhana untuk menyajikan pisang goreng yang berbeda - lebih renyah, lebih gurih, dan menggunakan bahan-bahan pilihan. Nama "Naira" sendiri diambil dari bahasa Arab yang berarti "yang bersinar", mencerminkan harapan kami untuk menjadi yang terbaik di bidangnya.
+                Mengusung standar mutu dan kerenyahan sebagai prioritas utama, setiap keripik diproses secara higienis tanpa bahan pengawet, menghasilkan rasa yang gurih, renyah, dan nikmat.
+
               </p>
               
               <div className="bg-amber-100 p-4 rounded-lg border-l-4 border-amber-400">
                 <p className="font-semibold text-amber-800">
-                  ✨ Filosofi Kami: "Dari hati untuk lidah Indonesia". Setiap gigitan pisang goreng Naira Snack dibuat dengan sepenuh hati menggunakan resep turun-temurun yang telah kami sempurnakan.
+            ✨ Filosofi : &ldquo;Dari camilan sederhana, lahir rasa yang luar biasa.&rdquo;
                 </p>
               </div>
               
@@ -52,16 +55,15 @@ const AboutNairaSnack = () => {
           <div className="bg-white p-6 rounded-xl shadow-md">
             <h3 className="text-2xl font-bold text-amber-800 mb-4">Visi</h3>
             <p className="text-amber-900">
-              "Menjadi brand pisang goreng premium yang dikenal secara nasional dengan cita rasa autentik dan kualitas terbaik."
+              &ldquo;Menjadi pelopor camilan tradisional yaitu keripik pisang yang berkualitas tinggi, higienis, dan digemari secara luas di pasar lokal maupun nasional..&rdquo;
             </p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-md">
             <h3 className="text-2xl font-bold text-amber-800 mb-4">Misi</h3>
             <ul className="list-disc pl-5 text-amber-900 space-y-2">
-              <li>Mempertahankan cita rasa tradisional dengan sentuhan inovasi</li>
-              <li>Menggunakan bahan baku terbaik dari petani lokal</li>
-              <li>Memberikan pengalaman kuliner yang memuaskan</li>
-              <li>Menjaga kebersihan dan kehigienisan produk</li>
+              <li>Menyajikan keripik pisang yang renyah, gurih, dan tanpa bahan pengawet</li>
+              <li>Menjaga kualitas produksi yang higienis dan konsisten</li>
+              <li>Mendukung produk lokal dan pemberdayaan masyarakat</li>
             </ul>
           </div>
         </div>
