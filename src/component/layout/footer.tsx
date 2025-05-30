@@ -33,12 +33,12 @@ const ContactSection = () => {
             </div>
             <h3 className="text-white text-2xl mb-4">Instagram</h3>
             <a 
-              href="https://instagram.com/nairasnacks" 
+              href="https://instagram.com/_naira.snack" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-amber-500 text-xl block mb-2 no-underline font-semibold tracking-wide"
             >
-              @nairasnacks
+              @_naira.snack
             </a>
             <p className="text-slate-400 text-base italic">Check our delicious snacks gallery!</p>
           </div>
@@ -50,7 +50,7 @@ const ContactSection = () => {
             </div>
             <h3 className="text-white text-2xl mb-4">Our Location</h3>
             <a 
-              href="https://maps.google.com/?q=Naira+Snacks+Sentul" 
+              href="https://maps.app.goo.gl/KLU6Wi5qNenJGucB8" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-amber-500 text-xl block mb-2 no-underline font-semibold tracking-wide"
