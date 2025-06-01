@@ -18,10 +18,10 @@ const ContactSection = () => {
             </div>
             <h3 className="text-white text-2xl mb-4">WhatsApp Order</h3>
             <a 
-              href="https://wa.me/+62 857-1752-2780" 
+              href="https://wa.me/+6282196949504" 
               className="text-amber-500 text-xl block mb-2 no-underline font-semibold tracking-wide"
             >
-              +62 857-1752-2780
+              +6282196949504
             </a>
             <p className="text-slate-400 text-base italic">Fast response within 15 minutes!</p>
           </div>
